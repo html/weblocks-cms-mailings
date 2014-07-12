@@ -1,7 +1,7 @@
 (in-package :weblocks-cms-mailings)
 
 (weblocks-cms:def-additional-schema 
-  :template
+  :message
   `((:TITLE "Message" :NAME :MESSAGE :FIELDS
      ((:TITLE "Content" :NAME :CONTENT :TYPE :EDITOR-TEXTAREA :OPTIONS NIL)
       (:TITLE "Email Address" :NAME :EMAIL-ADDRESS :TYPE :CUSTOM :OPTIONS
