@@ -122,7 +122,8 @@
                                                    variables-values)
                                         :content (mustache:mustache-render-to-string 
                                                    (weblocks-cms::message-content data)
-                                                   variables-values)) email-objects)))
+                                                   variables-values)
+                                        :type :sendmail-mail) email-objects)))
 
                         (loop for i in email-objects do 
                               (cl-who:htm 
