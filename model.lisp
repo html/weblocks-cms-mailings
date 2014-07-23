@@ -62,7 +62,7 @@ error-sending")
               :transport *mail-transport*))
 
 (defmethod send-message ((obj weblocks-cms::message))
-  (if (send-with-backend obj (weblocks-cms::message-type obj))
+  (if (ignore-errors (send-with-backend obj (weblocks-cms::message-type obj)))
     (setf (weblocks-cms::message-status obj) :sent)
     (setf (weblocks-cms::message-status obj) :error-sending))
   (setf (weblocks-cms::message-updated-at obj) (get-universal-time)))
