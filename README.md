@@ -40,11 +40,15 @@ Other important thing is email from address, it can be set By
 (defparameter weblocks-cms-mailings:*default-email-from* +email-from+)
 ```
 
-It is required to start `cl-cron` for messages sending.
+It is required to start `cl-cron` for messages sending. 
+Also, you should call `cl-cron:make-cron-job` with `'weblocks-cms-mailings:send-messages` as a parameter
 
 Also remember that only `weblocks-cms::message` objects with status `ready-to-send` would be sent.
 You should set status automatically or manually. 
 Default status for mailings is `created`, so you can preview emails but they will be sent via `cl-cron` job only after you set right status.
+
+When you need to remove some records from email targets filters, for example users without emails should not be there, you can use `weblocks-cms-mailings:email-model-display-in-grid-p` method.
+See the source for example.
 
 ## Options 
 

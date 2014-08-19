@@ -16,5 +16,3 @@
   (mapcar 
     #'send-message 
     (weblocks-utils:find-by-values 'weblocks-cms::message :status :ready-to-send)))
-
-(cl-cron:make-cron-job 'send-messages)

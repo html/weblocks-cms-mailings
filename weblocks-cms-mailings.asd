@@ -6,7 +6,7 @@
   :author "Olexiy Zamkoviy <olexiy.z@gmail.com>"
   :version (:read-from-file "version.lisp-expr")
   :license "LLGPL"
-  :depends-on (#:weblocks-cms #:weblocks-filtering-widget #:arnesi #:weblocks-cms-pages #:weblocks-bootstrap-typeahead-presentation #:cl-cron #:cl-sendmail #:flexi-streams #:weblocks-utils)
+  :depends-on (#:weblocks-cms #:weblocks-filtering-widget #:arnesi #:weblocks-cms-pages #:weblocks-bootstrap-typeahead-presentation #:cl-sendmail #:flexi-streams #:weblocks-utils #:alexandria)
   :components 
   ((:file "package")
    (:file "spellcheck")
