@@ -93,7 +93,7 @@
               (setf view (defview nil (:type form :persistp nil :inherit-from view)
                                   (weblocks-cms::email-address :hidep t)
                                   (weblocks-cms::status :hidep t)
-                                  (weblocks-cms::message-type :hidep t)
+                                  (weblocks-cms::type :hidep t)
                                   (emails-to-write 
                                     :label "Emails for the letter" 
                                     :present-as html
