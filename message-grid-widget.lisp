@@ -146,10 +146,10 @@
                                             :email-address (email-model-email-address i)
                                             :updated-at (get-universal-time)
                                             :status :created
-                                            :subject (mustache:mustache-render-to-string 
+                                            :subject (mustache:render* 
                                                        (weblocks-cms::message-subject data)
                                                        variables-values)
-                                            :content (mustache:mustache-render-to-string 
+                                            :content (mustache:render* 
                                                        (weblocks-cms::message-content data)
                                                        variables-values)
                                             :type :sendmail-mail) email-objects)))
