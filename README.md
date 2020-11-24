@@ -2,7 +2,7 @@
 
 A plugin for quick mailing in your Weblocks application.
 
-Its feature are: 
+Its features are: 
 
 * Mass mailings with filtered targets 
 
